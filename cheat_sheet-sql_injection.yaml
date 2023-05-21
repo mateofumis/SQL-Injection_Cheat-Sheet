@@ -1,0 +1,19 @@
+# Cheat Sheet by @mateofumis
+- Listar Bases de Datos: "schema_name from information_schema.schemata"
+- Listar tablas: "table_name from information_schema.tables where table_schema = '$X'"
+- Listar columnas de tabla seleccionada: "column_name information_schema.columns where table_schema = '$X' and table_name = '$Y'"
+- Listar valores de las columnas seleccionadas de la tabla seleccionada:
+  - Ejemplo en Oracle: "$X||':'||$Y from $TABLA_USERS" # Notar que el string ':' entre $X y $Y se usa para separar los valores
+- Dumpear información:
+  - Oracle: "foo||bar"
+  - Microsoft: "foo'+'bar"
+  - PostgreSQL: "foo||bar"
+  - MySQL: 
+    - "foo bar" # Dejar espacio entre columna y columna: 'foo [space] bar'
+    - "CONCAT(foo,bar)"
+    - "GROUP_CONCAT(foo,bar)"
+
+# Tip:
+# Añadir un string ':' entre valores para separarlos
+# Ejemplo en MySQL: "CONCAT(foo,':',bar)" 
+

